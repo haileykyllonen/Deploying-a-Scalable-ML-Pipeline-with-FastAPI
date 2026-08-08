@@ -17,11 +17,12 @@ def process_data(
     Inputs
     ------
     X : pd.DataFrame
-        Dataframe containing the features and label. Columns in `categorical_features`
+        Dataframe containing the features and label.
+        Columns in `categorical_features`
     categorical_features: list[str]
         List containing the names of the categorical features (default=[])
     label : str
-        Name of the label column in `X`. If None, then an empty array will 
+        Name of the label column in `X`. If None, then an empty array will
         be returned for y (default=None)
     training : bool
         Indicator if training mode or inference/validation mode.
@@ -37,10 +38,10 @@ def process_data(
     y : np.array
         Processed labels if labeled=True, otherwise empty np.array.
     encoder : sklearn.preprocessing._encoders.OneHotEncoder
-        Trained OneHotEncoder if training is True, otherwise returns 
+        Trained OneHotEncoder if training is True, otherwise returns
         the encoder passed in.
     lb : sklearn.preprocessing._label.LabelBinarizer
-        Trained LabelBinarizer if training is True, otherwise returns 
+        Trained LabelBinarizer if training is True, otherwise returns
         the binarizer passed in.
     """
 
